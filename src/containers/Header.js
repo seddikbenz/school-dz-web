@@ -3,12 +3,18 @@ import { Button, StyleSheet, Text, View } from "react-native";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
-class Home extends React.Component {
+class Header extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>home; count = {this.props.count}</Text>
-        <Button onPress={() => this.props.increment(1)} title="click here" />
+        <View>
+          <Link to="home" style={{ textAlign: "center", fontSize: 32 }}>
+            go to home
+          </Link>
+          <Link to="settings" style={{ textAlign: "center", fontSize: 32 }}>
+            go to Settings
+          </Link>
+        </View>
       </View>
     );
   }
@@ -32,4 +38,4 @@ const styles = StyleSheet.create({
 export default connect(
   mapState,
   mapDispatch
-)(Home);
+)(Header);

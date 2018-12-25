@@ -7,10 +7,7 @@ class Settings extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Link to="home" style={{ textAlign: "center", fontSize: 32 }}>
-          go to Home
-        </Link>
-        <Text>count = {this.props.count}</Text>
+        <Text>settings; count = {this.props.count}</Text>
         <Button onPress={() => this.props.increment(1)} title="click here" />
       </View>
     );

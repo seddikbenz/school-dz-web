@@ -5,14 +5,18 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Home from "./containers/Home";
 import Settings from "./containers/Settings";
+import Header from "./containers/Header";
 
 class App extends Component {
   render() {
     return (
       <Router style={styles.app}>
-        <Route path="/" exact component={Home} />
-        <Route path="/home/" component={Home} />
-        <Route path="/settings/" component={Settings} />
+        <View>
+          <Header />
+          <Route path="/" exact component={Home} />
+          <Route path="/home/" component={Home} />
+          <Route path="/settings/" component={Settings} />
+        </View>
       </Router>
     );
   }

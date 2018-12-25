@@ -1,0 +1,25 @@
+{
+  "name": "school-dz",
+  "version": "1.0.0",
+  "description": "app to share lessons and ideas for teachers and students",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "@rematch/core": "1.0.6",
+    "react": "16.5.1",
+    "react-art": "16.5.1",
+    "react-dom": "16.5.1",
+    "react-native-web": "0.9.x",
+    "react-redux": "6.0.0",
+    "react-router-dom": "4.3.1",
+    "react-scripts": "1.1.5",
+    "redux": "4.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

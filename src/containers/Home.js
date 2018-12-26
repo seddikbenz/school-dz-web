@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 
 class Home extends React.Component {
@@ -9,6 +9,10 @@ class Home extends React.Component {
       <View style={styles.container}>
         <Text>home; count = {this.props.count}</Text>
         <Button onPress={() => this.props.increment(1)} title="click here" />
+        <Button
+          title="go to settings"
+          onPress={() => this.props.history.push("/settings")}
+        />
       </View>
     );
   }
@@ -29,7 +33,9 @@ const styles = StyleSheet.create({
   }
 });
 
-export default connect(
-  mapState,
-  mapDispatch
-)(Home);
+export default withRouter(
+  connect(
+    mapState,
+    mapDispatch
+  )(Home)
+);

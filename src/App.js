@@ -3,9 +3,12 @@ import { connect } from "react-redux";
 import { StyleSheet, Text, View } from "react-native";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
+import Header from "./containers/Header";
 import Home from "./containers/Home";
 import Settings from "./containers/Settings";
-import Header from "./containers/Header";
+
+import PrivateRoute from "./components/PrivateRoute";
+import Login from "./components/Login";
 
 class App extends Component {
   render() {
@@ -14,8 +17,8 @@ class App extends Component {
         <View>
           <Header />
           <Route path="/" exact component={Home} />
-          <Route path="/home/" component={Home} />
-          <Route path="/settings/" component={Settings} />
+          <Route path="/login" component={Login} />
+          <PrivateRoute path="/settings/" component={Settings} />
         </View>
       </Router>
     );

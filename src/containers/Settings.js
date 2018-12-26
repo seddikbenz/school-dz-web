@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 
 class Settings extends React.Component {
@@ -29,7 +29,9 @@ const styles = StyleSheet.create({
   }
 });
 
-export default connect(
-  mapState,
-  mapDispatch
-)(Settings);
+export default withRouter(
+  connect(
+    mapState,
+    mapDispatch
+  )(Settings)
+);
